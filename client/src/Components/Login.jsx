@@ -11,7 +11,7 @@ export default function Login() {
 
     function handleLogin(e) {
         e.preventDefault()
-        axios.post("http://localhost:2000/api/login", loginData,
+        axios.post(`${import.meta.env.VITE_API_URL}/api/login`, loginData,
             {withCredentials:true})
             .then(res => {
                 console.log(res)

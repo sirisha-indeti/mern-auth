@@ -22,7 +22,7 @@ export default function Register() {
     function handleSubmit(e) {
         e.preventDefault()
         console.log(formData)
-        axios.post("http://localhost:2000/api/register", formData)
+        axios.post(`${import.meta.env.VITE_API_URL}/api/register`, formData)
             .then((res) => {
                 if(res.sttus===1)
                 alert("Registered Successfully!");
